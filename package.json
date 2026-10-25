@@ -1,0 +1,9 @@
+{
+  "name": "safespace-chatbot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A simple personal-safety support chatbot",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

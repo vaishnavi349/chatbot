@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f4f8">
+  <meta name="description" content="A simple, supportive chatbot with practical personal-safety suggestions.">
+  <title>SafeSpace — Personal safety support</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="SafeSpace home">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span>SafeSpace</span>
+      </a>
+      <span class="online-status"><span class="status-dot"></span> Here to support you</span>
+    </header>
+
+    <section class="welcome" aria-labelledby="welcome-title">
+      <p class="eyebrow">A little support, whenever you need it</p>
+      <h1 id="welcome-title">Your safety matters.</h1>
+      <p class="welcome-copy">Get practical ideas for staying safe, making a plan, or finding someone to talk to. Choose a prompt or tell me what’s on your mind.</p>
+    </section>
+
+    <section class="chat-card" aria-label="SafeSpace chat">
+      <div class="chat-heading">
+        <div class="assistant-avatar" aria-hidden="true">S</div>
+        <div>
+          <h2>SafeSpace assistant</h2>
+          <p><span class="status-dot"></span> Available now</p>
+        </div>
+        <span class="chat-label">PRIVATE CHAT*</span>
+      </div>
+
+      <div id="chat-messages" class="chat-messages" role="log" aria-live="polite" aria-relevant="additions">
+        <article class="message bot-message">
+          <div class="message-avatar" aria-hidden="true">S</div>
+          <div class="message-content">
+            <p>Hi, I’m glad you’re here. I can share general safety ideas and help you think through a next step. What would feel helpful right now?</p>
+            <time>Just now</time>
+          </div>
+        </article>
+      </div>
+
+      <div class="suggestions" aria-label="Suggested questions">
+        <button class="suggestion" type="button" data-message="I need help staying safe right now">I need help right now</button>
+        <button class="suggestion" type="button" data-message="Help me make a safety plan">Make a safety plan</button>
+        <button class="suggestion" type="button" data-message="I want to support a friend">Help a friend</button>
+      </div>
+
+      <form id="chat-form" class="chat-input-area">
+        <label class="visually-hidden" for="message-input">Type your message</label>
+        <input id="message-input" name="message" type="text" maxlength="500" autocomplete="off" placeholder="Write a message..." required>
+        <button class="send-button" type="submit" aria-label="Send message">
+          <span>Send</span>
+          <svg aria-hidden="true" viewBox="0 0 20 20" fill="none">
+            <path d="M3.5 10h12m0 0-5-5m5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </form>
+      <p class="privacy-note">*This demo doesn’t save or send your messages. If someone can see your device, consider closing this page.</p>
+    </section>
+
+    <aside class="emergency-card" aria-label="Emergency support">
+      <div class="emergency-icon" aria-hidden="true">!</div>
+      <div class="emergency-copy">
+        <h2>In immediate danger?</h2>
+        <p>Move to a safer place if you can and contact your local emergency services or someone you trust.</p>
+      </div>
+      <a class="emergency-link" href="tel:112" aria-label="Call 112, if this is your local emergency number">Call 112 <span aria-hidden="true">↗</span></a>
+    </aside>
+
+    <footer class="footer-note">This chatbot offers general suggestions, not emergency response or professional advice. Use the emergency number for your location.</footer>
+  </main>
+</body>
+</html>
